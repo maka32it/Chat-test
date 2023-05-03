@@ -1,0 +1,130 @@
+@import '../../styles/variables.scss';
+.messageField{
+    flex:3;
+    background-color: $darkGray;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:30px ;
+        border-bottom: 1px solid $lightGray;
+        .left{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .profile-pic{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+            .name{
+                font-weight: 700;
+            }
+            .status{
+                font-size: 15px;
+            }
+        }
+        .right{
+            .bell{
+                font-size: 30px;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .messages{
+        padding: 30px;
+        overflow: scroll;
+        .message{
+            margin-bottom: 30px;
+            &-outer{
+                display: flex;
+                span{
+                    margin-top: auto;
+                    font-size: 10px;
+                    padding: 0 10px;;
+                }
+            }
+            &-inner{
+                flex: 1;
+                display: flex;
+                flex-direction: row-reverse;
+                &.customer{
+                    flex-direction: row;
+                }
+            }
+            &-bubble{
+                padding: 10px;
+                background-color: $purple;
+                border-radius: 5px;
+                max-width: calc(100% - 67px);
+                overflow-wrap: break-word;
+                &.customer{
+                    background-color:$lightGray;
+                }
+                span{
+                    padding: 10px;
+                    font-size: 15px;
+                }
+            }
+            &-spacer{
+                flex: 1;
+            }
+        }
+    }
+    .textField{
+        padding:15px 30px;
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+        margin-left: 30px;
+        background-color: $lightGray;
+        form{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            background-color: $lightGray;
+        }
+        .plus{
+            font-size: 20px;
+            background-color: $purple;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: none;
+            outline: none;
+            margin-right: 10px;
+            cursor: pointer;
+
+        }
+        input{
+            padding: 10px;
+            flex: 1;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: white;
+        }
+        .send{
+            font-size: 20px;
+            background-color: $purple;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            &:disabled{
+                opacity: .5;
+            }
+        }
+    }
+}

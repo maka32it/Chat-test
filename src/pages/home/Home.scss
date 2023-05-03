@@ -1,0 +1,8 @@
+@import '../../styles/variables.scss';
+.home{
+    height: 100vh;
+    display: flex;
+    background-color:$darkGray;
+    color:white;
+    padding: 30px;
+}

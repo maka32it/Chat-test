@@ -1,0 +1,90 @@
+@import '../../styles//variables.scss';
+.listOfChats{
+    flex:2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow:scroll;
+    .searchBar{
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        span{
+            font-size: 25px;
+            position: absolute;
+            right: 30px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        input{
+            width: 100%;
+            padding: 15px;
+            background-color: $darkGray;
+            border: none;
+            outline: none;
+            color: white;
+            &:focus::placeholder{
+                color:transparent;
+            }
+            &::placeholder  {
+                color:white;
+            }
+        }
+    }
+    .chats{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        .chat-container{
+            border-bottom: 1px solid $lightGray;
+            padding: 20px;
+            cursor:pointer;
+            &:hover{
+                background-color: $lightGray;
+            }
+
+            .top{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 20px;
+                .left{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+                .profile-pic{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+                .name{
+                    font-size: 15px;
+                    font-weight: 700;
+                }
+                .active{
+                    font-size: 12px;
+                    font-weight: 700;
+                }
+            }
+            .bottom{
+                overflow: hidden;
+                .message{
+                    line-height: 1.5;
+                    font-size: 12px;
+                    padding: 0 20px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                }
+                
+            }
+        }
+    }
+}
